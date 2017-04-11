@@ -69,7 +69,8 @@ class QuoteController extends Controller
      */
     public function update(Request $request, Quote $quote)
     {
-        //
+        $quote->update($request->all());
+        return $quote;
     }
 
     /**
