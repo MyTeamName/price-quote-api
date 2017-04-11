@@ -32,3 +32,12 @@ $factory->define(App\Customer::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
     ];
 });
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Product::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->unique()->word,
+        'description' => $faker->paragraph,
+        'image' => $faker->imageUrl($width = 640, $height = 480, 'technics'),
+    ];
+});
