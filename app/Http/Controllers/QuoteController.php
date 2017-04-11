@@ -35,7 +35,7 @@ class QuoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Quote::create($request->all());
     }
 
     /**
