@@ -11,4 +11,9 @@ class Product extends Model
         'description',
         'image',
     ];
+
+    public function quotes()
+    {
+        return $this->hasMany(Quote::class);
+    }
 }

@@ -12,4 +12,9 @@ class Customer extends Model
         'phone',
         'email',
     ];
+
+    public function quotes()
+    {
+        return $this->hasMany(Quote::class);
+    }
 }
